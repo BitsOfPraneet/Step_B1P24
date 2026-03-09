@@ -3,7 +3,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class DistributedRateLimiter {
 
-    // clientId -> TokenBucket
     private ConcurrentHashMap<String, TokenBucket> clientBuckets;
 
     private static final long MAX_TOKENS = 1000;              // 1000 requests
